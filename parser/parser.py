@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 
 def get_raw_html(url: str, headers: dict[str, str], next_page="/page/1/"):
-    """получает html код нужных блоков"""
+    """Получает html код нужных блоков"""
     req = requests.get(url + next_page, headers=headers)
     src = []
     quotes = BeautifulSoup(req.text, "html.parser").find_all("div", class_="quote")
@@ -15,7 +15,7 @@ def get_raw_html(url: str, headers: dict[str, str], next_page="/page/1/"):
 
 
 def get_json(url, headers):
-    """преобразует все блоки в массив словарей"""
+    """Преобразует все блоки в массив словарей"""
     src = get_raw_html(url, headers)
     quotes = []
 
