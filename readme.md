@@ -2,6 +2,19 @@
 
 Данная программа собирает данные с сайта https://quotes.toscrape.com/
 
+Для лучшего стиля использую `Black`\
+Для управления зависимостями использую `Poetry`
+Python версии 3.13
+
+Чтобы проект работал и у вас можете выполнить следующие команды по порядку:
+```bash
+git clone https://github.com/kostant25/parcing_quotes_site.git
+poetry config virtualenvs.in-project true
+poetry install
+```
+Если poetry не установлен, нужно будет самостоятельно установить себе библиотеки `Requests` и `BeautifulSoup4`
+и желательно в виртуальное окружение))
+
 А теперь не много пояснения
 
 ## 1. Что сделали?
